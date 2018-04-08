@@ -1,0 +1,16 @@
+__author__ = "Rohit Rao"
+import re
+class Utils(object):
+    @staticmethod
+    def email_is_valid(email):
+        email_address_matcher=re.compile('^[\w-]+@([\w-]+\.)+[\w]+$')
+        return True if email_address_matcher.match(email) else False
+
+    # @staticmethod
+    # def hashed_password(password):
+    #     return pbkdf2_sha512.encrypt(password)
+    #
+    # @staticmethod
+    # def check_hashed_password(password,hashed_password):
+    #
+    #     return pbkdf2_sha512.verify(password,hashed_password)

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container">
+    <div class="jumbotron">
+            <h3>Hello {{ email }}</h3>
+
+            <p>
+                <a href="/blogs/new" class="btn btn-lg btn-primary"  role="button">Create Blog </a>
+                <a href="/blogs" class="btn btn-lg btn-info" role="button">View Blogs</a>
+            </p>
+    </div>
+</div>
+{% endblock %}

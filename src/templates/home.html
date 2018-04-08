@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+            <h1>Rohit's Blog</h1>
+            <p>Small blog app written using python flask and mongodb</p>
+            <p> {% if not session['email'] : %}
+                <a href="/login" class="btn btn-lg btn-primary"  role="button">Login </a>
+                <a href="/register" class="btn btn-lg btn-info" role="button">New User ..Register now</a>
+                {% else : %}
+                <a href="/blogs" class="btn btn-lg btn-warning"  role="button">View Blogs </a>
+                {% endif %}
+
+            </p>
+    </div>
+</div>
+
+{% endblock %}

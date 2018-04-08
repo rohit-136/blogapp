@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container page-form">
+    <div class="jumbotron">
+        <h3>Register</h3>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="alert alert-danger">
+
+            {% for message in messages %}
+                {{ message }}
+
+            {% endfor %}
+             </div>
+          {% endif %}
+        {% endwith %}
+
+    <form id="login-form" action="/auth/register" method="post">
+        <div class="form-group" >
+            <label for="email">Email</label>
+            <input type="text" id="email" class="form-control" name="email">
+        </div>
+        <div class="form-group" >
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" name="password">
+        </div>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+    </form>
+    </div>
+</div>
+{% endblock %}
