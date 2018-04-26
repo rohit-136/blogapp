@@ -13,7 +13,7 @@ class Database(object):
 
     @staticmethod
     def initialise():
-        client=pymongo.MongoClient(Database.URI)
+        client=pymongo.MongoClient("mongodb://host/db_name")
         #Database.DATABASE=client['Python']
         Database.DATABASE=client.get_default_database()
 
